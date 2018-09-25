@@ -1,4 +1,4 @@
-class ImportProductsJob < ApplicationJob
+class ImportProductsJob < ActiveJob::Base
   queue_as :default
 
   def perform(product_imports)
