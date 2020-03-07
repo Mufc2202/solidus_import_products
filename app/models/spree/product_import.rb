@@ -8,8 +8,8 @@ module Spree
     ENCODINGS = %w[UTF-8 iso-8859-1].freeze
 
     has_attached_file :data_file,
-                      path: ':rails_root/tmp/product_data/data-files/:basename_:timestamp.:extension',
-                      url: ':rails_root/tmp/product_data/data-files/:basename_:timestamp.:extension'
+                      path: 'product_data/data-files/:basename_:timestamp.:extension',
+                      url: 'product_data/data-files/:basename_:timestamp.:extension'
 
     belongs_to :user, class_name: 'Spree::User', foreign_key: 'created_by', inverse_of: :product_imports
 
